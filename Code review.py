@@ -28,4 +28,16 @@ def cifra_de_cesar(texto, deslocamento):
 
 def valida_cpf(cpf_string):
     # Todos: Implementar a lógica
+    palavras = frase.split()
+    maior = ""
+
+    for palavra in palavras:
+        # Remove pontuação
+        palavra_limpa = palavra.strip(string.punctuation)
+
+        if len(palavra_limpa) > len(maior):
+            maior = palavra_limpa
+
+    return maior
+    
     pass
